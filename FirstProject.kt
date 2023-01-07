@@ -8,6 +8,7 @@ Todo().addTask(task = task1)
 
 Todo().show()
 
+
 }
 
 
@@ -18,6 +19,7 @@ Todo().show()
     fun show(){
         for (i in tasks){
             println("$tasks")
+            return
 
         }
     }
@@ -25,17 +27,25 @@ Todo().show()
         tasks.add(task)
         tasks.add(task)
         println(tasks)
+        return
 
 
     }
     fun removeTask(task: Task){
         tasks.remove(task)
         tasks.remove(task)
+        println("records Deleted")
+        return
 
 
     }
     fun changeTask(task: Task){
-    task.isCompleted = false
+        if (!task.isCompleted){
+            task.isCompleted = true
+            println("records Changed")
+            return
+        }
+
 
     }
 
