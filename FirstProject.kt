@@ -28,7 +28,6 @@ if (tasks.isNotEmpty()){
     }
       fun addTask(task: Task) {
         tasks.add(task)
-
         println("Items added")
         return
 
@@ -36,7 +35,6 @@ if (tasks.isNotEmpty()){
     }
     fun removeTask(task: Task){
         tasks.remove(task)
-
         println("records has been Deleted")
         return
 
@@ -55,6 +53,6 @@ if (tasks.isNotEmpty()){
 
 }
 
-data class Task(val id:Int = 0, val name:String ="",val note:String ="",var isCompleted:Boolean = false){
+data class Task(val id:Int = 0, val name:String ="",val note:String ="",var isCompleted:Boolean = true){
 
 }
