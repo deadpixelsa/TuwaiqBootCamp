@@ -1,10 +1,10 @@
-package com.example.firsthomework
-
+package com.example.myapplication12
 fun main(){
-    val task1= Task(1,"mohammed","First Grade",true)
-    val task2= Task(2,"khalid","Second Grade",true)
+val task1= Task(1,"mohammed","First Grade",true)
+val task2= Task(2,"khalid","Second Grade",true)
 Todo().addTask(task = task1)
-    Todo().addTask(task = task2)
+Todo().addTask(task = task2)
+    Todo().changeTask(task2)
 
 Todo().show()
 
@@ -12,21 +12,23 @@ Todo().show()
 }
 
 
- open class Todo{
+open class Todo{
 
-   private val tasks = arrayListOf<Task>()
+    private val tasks = arrayListOf<Task>()
 
-    fun show(){
+   open fun show(){
+if (tasks.isNotEmpty()){
         for (i in tasks){
             println("$tasks")
             return
-
         }
+    }else
+        println("array is empty")
     }
-    fun addTask(task: Task) {
+     open fun addTask(task: Task) {
         tasks.add(task)
         tasks.add(task)
-        println(tasks)
+        println("Items add")
         return
 
 
@@ -34,7 +36,7 @@ Todo().show()
     fun removeTask(task: Task){
         tasks.remove(task)
         tasks.remove(task)
-        println("records Deleted")
+        println("records has been Deleted")
         return
 
 
@@ -44,7 +46,8 @@ Todo().show()
             task.isCompleted = true
             println("records Changed")
             return
-        }
+        }else
+            println("No need to Change record it's true")
 
 
     }
@@ -54,4 +57,3 @@ Todo().show()
 data class Task(val id:Int = 0, val name:String ="",val note:String ="",var isCompleted:Boolean = false){
 
 }
-
