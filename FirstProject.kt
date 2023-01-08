@@ -28,7 +28,7 @@ if (tasks.isNotEmpty()){
     }
       fun addTask(task: Task) {
         tasks.add(task)
-        tasks.add(task)
+
         println("Items added")
         return
 
@@ -36,7 +36,7 @@ if (tasks.isNotEmpty()){
     }
     fun removeTask(task: Task){
         tasks.remove(task)
-        tasks.remove(task)
+
         println("records has been Deleted")
         return
 
