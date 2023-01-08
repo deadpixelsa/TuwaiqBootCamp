@@ -53,6 +53,6 @@ if (tasks.isNotEmpty()){
 
 }
 
-data class Task(val id:Int = 0, val name:String ="",val note:String ="",var isCompleted:Boolean = true){
+data class Task(val id:Int = 0, val name:String ="",val note:String ="",var isCompleted:Boolean = false){
 
 }
