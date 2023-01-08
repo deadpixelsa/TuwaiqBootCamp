@@ -4,18 +4,15 @@ val task1= Task(1,"mohammed","First Grade",true)
 val task2= Task(2,"khalid","Second Grade",true)
 Todo().addTask(task = task1)
 Todo().addTask(task = task2)
-    Todo().changeTask(task2)
-    Todo().removeTask(task2)
 
-Todo().show()
 
 
 }
 
 
- class Todo{
+ class Todo(){
 
-    private val tasks = arrayListOf<Task>()
+   private val tasks = arrayListOf<Task>()
 
     fun show(){
 if (tasks.isNotEmpty()){
@@ -28,7 +25,8 @@ if (tasks.isNotEmpty()){
     }
       fun addTask(task: Task) {
         tasks.add(task)
-        println("Items added")
+        println("Item added")
+          println(task)
         return
 
 
